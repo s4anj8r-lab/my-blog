@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f6f2">
+  <meta name="description" content="مدونة شخصية للكتابات والأفكار والتأملات.">
+  <title>أثر — مدونة شخصية</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="#" class="brand" aria-label="العودة للرئيسية">
+      أثر<span>.</span>
+    </a>
+
+    <nav class="main-nav" aria-label="التنقل الرئيسي">
+      <a href="#home">الرئيسية</a>
+      <a href="#articles">الكتابات</a>
+      <a href="#about">عن المدونة</a>
+    </nav>
+
+    <button id="themeToggle" class="icon-button"
+      type="button" aria-label="تغيير المظهر">
+      <span id="themeIcon">☾</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero section-wrap" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">مساحة للكلمات والأفكار</p>
+        <h1>بعض الكلمات<br>تترك <span>أثرًا.</span></h1>
+        <p class="hero-description">
+          هنا أكتب ما يستحق التأمل، وأجمع الأفكار التي
+          لا أريد لها أن تضيع وسط ضجيج الأيام.
+        </p>
+        <a class="primary-button" href="#articles">
+          اكتشف الكتابات <span>←</span>
+        </a>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-circle"></div>
+        <div class="art-line"></div>
+        <span class="art-word">تأمّل</span>
+        <span class="art-number">01 / 26</span>
+      </div>
+    </section>
+
+    <section class="quote-strip">
+      <p>« ليست كل الأفكار العابرة عابرة حقًا. »</p>
+    </section>
+
+    <section class="articles-section section-wrap" id="articles">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">المكتبة</p>
+          <h2>آخر الكتابات</h2>
+        </div>
+        <p class="section-note">كلمات تستحق بعض الوقت.</p>
+      </div>
+
+      <div class="toolbar">
+        <label class="search-box">
+          <span aria-hidden="true">⌕</span>
+          <input id="searchInput" type="search"
+            placeholder="ابحث عن مقالة..."
+            aria-label="ابحث عن مقالة">
+        </label>
+
+        <div id="categoryFilters" class="filters"
+          aria-label="تصفية حسب التصنيف">
+        </div>
+      </div>
+
+      <div id="articlesGrid" class="articles-grid"
+        aria-live="polite">
+      </div>
+
+      <p id="emptyMessage" class="empty-message" hidden>
+        ما لقينا كتابة تطابق بحثك.
+      </p>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="section-wrap about-inner">
+        <p class="eyebrow">عن هذه المساحة</p>
+        <h2>الكتابة طريقة<br>أخرى لفهم العالم.</h2>
+        <p>
+          هذه مدونتي الشخصية؛ مساحة مفتوحة للأفكار،
+          والقراءات، والأسئلة التي تستحق أن نتوقف عندها.
+          كل نص هنا محاولة صغيرة لفهم شيء أكبر.
+        </p>
+        <a href="#home" class="text-link">العودة إلى البداية ↑</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a href="#home" class="brand">أثر<span>.</span></a>
+    <p>كُتبت الكلمات لتبقى.</p>
+    <p>© <span id="currentYear"></span> أثر</p>
+  </footer>
+
+  <dialog id="articleDialog" class="article-dialog">
+    <div class="dialog-top">
+      <span id="dialogCategory" class="eyebrow"></span>
+      <button id="closeDialog" class="icon-button"
+        type="button" aria-label="إغلاق المقال">✕</button>
+    </div>
+    <h2 id="dialogTitle"></h2>
+    <p id="dialogMeta" class="article-meta"></p>
+    <div id="dialogBody" class="dialog-body"></div>
+  </dialog>
+
+</body>
+</html>
