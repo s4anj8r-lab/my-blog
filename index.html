@@ -20,7 +20,9 @@
     <nav class="main-nav" aria-label="التنقل الرئيسي">
       <a href="#home">الرئيسية</a>
       <a href="#articles">الكتابات</a>
-      <a href="#about">عن المدونة</a>
+      <a href="about.html">عن المدونة</a>
+      <a herf="privacy.html">سياسة الخصوصية</a>
+      <a herf="contact.html">تواصل معنا</a>
     </nav>
 
     <button id="themeToggle" class="icon-button"
@@ -106,6 +108,63 @@
     <p>© <span id="currentYear"></span> أثر</p>
   </footer>
 
+<section id="authSection" class="auth-section">
+  <h2>انضم إلى أثر</h2>
+  <p>أنشئ حسابك وشارك أفكارك مع الآخرين.</p>
+
+  <form id="signupForm">
+    <h3>إنشاء حساب</h3>
+
+    <input
+      id="signupName"
+      type="text"
+      placeholder="اسم الكاتب"
+      required
+    >
+
+    <input
+      id="signupEmail"
+      type="email"
+      placeholder="البريد الإلكتروني"
+      required
+    >
+
+    <input
+      id="signupPassword"
+      type="password"
+      placeholder="كلمة المرور"
+      required
+      minlength="8"
+    >
+
+    <button type="submit">إنشاء حساب</button>
+  </form>
+
+  <hr>
+
+  <form id="loginForm">
+    <h3>تسجيل الدخول</h3>
+
+    <input
+      id="loginEmail"
+      type="email"
+      placeholder="البريد الإلكتروني"
+      required
+    >
+
+    <input
+      id="loginPassword"
+      type="password"
+      placeholder="كلمة المرور"
+      required
+    >
+
+    <button type="submit">دخول</button>
+  </form>
+
+  <p id="authMessage"></p>
+</section>
+
   <dialog id="articleDialog" class="article-dialog">
     <div class="dialog-top">
       <span id="dialogCategory" class="eyebrow"></span>
@@ -116,6 +175,9 @@
     <p id="dialogMeta" class="article-meta"></p>
     <div id="dialogBody" class="dialog-body"></div>
   </dialog>
-
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
+<script src="script.js"></script>
+<script src="auth.js"></script>
 </body>
 </html>
